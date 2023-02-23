@@ -14,9 +14,9 @@ public class OverScene : IScene
 
     public OverScene()
     {
-        _title = "GAME OVER";
-        _scoreText = "SCORE:";
-        _highScoreText = "HIGH SCORE:";
+        _title = "GAME OVER!";
+        _scoreText = "SCORE: ";
+        _highScoreText = "HIGH SCORE: ";
         _replayText = "[R] REPLAY";
         _toMenuText = "[M] MENU";
     }
@@ -27,7 +27,7 @@ public class OverScene : IScene
         if(KeyManager.GetState().IsKeyPressed(Keys.R))
             SceneChangedEvent?.Invoke(SceneType.Game);
         // TRANSITION: Over to Menu
-        else if(KeyManager.GetState().IsKeyPressed(Keys.M))
+        if(Keyboard.GetState().IsKeyDown(Keys.M))
             SceneChangedEvent?.Invoke(SceneType.Menu);
     }
 
@@ -40,11 +40,15 @@ public class OverScene : IScene
         spriteBatch.DrawString(largeFont, _title, new Vector2(Game1.CenterText(largeFont, _title).X, 15.0f), Color.DarkGreen);
 
         // Score text render
+        spriteBatch.DrawString(mediumFont, _scoreText, Game1.CenterText(mediumFont, _scoreText) - new Vector2(0.0f, 100.0f), Color.ForestGreen);
 
         // High score text render
+        spriteBatch.DrawString(mediumFont, _highScoreText, Game1.CenterText(mediumFont, _highScoreText) - new Vector2(0.0f, 70.0f), Color.ForestGreen);
 
         // Replay text render
+        spriteBatch.DrawString(mediumFont, _replayText, Game1.CenterText(mediumFont, _replayText), Color.DarkGreen);
 
         // To menu text render
+        spriteBatch.DrawString(mediumFont, _toMenuText, Game1.CenterText(mediumFont, _toMenuText) + new Vector2(0.0f, 30.0f), Color.DarkGreen);
     }
 }

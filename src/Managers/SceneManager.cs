@@ -11,9 +11,9 @@ public class SceneManager
 
     public SceneManager()
     {
-        Type = SceneType.Menu;
+        Type = SceneType.Over;
 
-        _currentScene = new MainMenuScene();
+        _currentScene = new OverScene();
 
         _isSceneChange = false;
 
