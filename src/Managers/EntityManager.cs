@@ -11,11 +11,25 @@ public class EntityManager
 
     public EntityManager()
     {
+        Entities = new List<IEntity>();
 
+        /* Adding entities */
+        // Player
+        Entities.Add(new Player());
     }
 
     public void Update(GameTime gameTime)
     {
+        // Deleting any entity that is inactive
+        for(int i = 0; i < Entities.Count; i++)
+        {
+            if(!Entities[i].IsAlive)
+            {
+                Entities.RemoveAt(i);
+                i--;
+            }
+        }
+
         // Updating all of the entities
         foreach(var entity in Entities)
         {

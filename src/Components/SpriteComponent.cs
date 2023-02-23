@@ -7,7 +7,6 @@ public class SpriteComponent : IRenderComponent
 {
     public Texture2D Texture {get; set;}
     public Color Tint {get; set;}
-    public bool IsRenderable {get; set;}
 
     private TransformComponent _transform;
 
@@ -15,25 +14,20 @@ public class SpriteComponent : IRenderComponent
     {
         Texture = texture;
         Tint = tint;
-        IsRenderable = true;
 
         _transform = transform;
     }
 
     public void Render(SpriteBatch spriteBatch)
     {
-        // Renders only is able
-        if(IsRenderable)
-        {
-            spriteBatch.Draw(Texture, 
-                            _transform.Position, 
-                            null, 
-                            Tint,
-                            _transform.Rotation, 
-                            Vector2.Zero, 
-                            _transform.Scale, 
-                            SpriteEffects.None,
-                            1.0f);
-        }
+        spriteBatch.Draw(Texture, 
+                         _transform.Position, 
+                         null, 
+                         Tint,
+                         _transform.Rotation, 
+                         Vector2.Zero, 
+                         _transform.Scale, 
+                         SpriteEffects.None,
+                         0);
     }
 }

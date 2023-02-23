@@ -3,8 +3,10 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace LepeyTheCovetous;
 
-public interface IEntity
+public abstract class IEntity
 {
-    public void Render(SpriteBatch spriteBatch);
-    public void Update(GameTime gameTime);
+    public abstract bool IsAlive {get; set;}
+
+    public abstract void Render(SpriteBatch spriteBatch);
+    public abstract void Update(GameTime gameTime);
 }

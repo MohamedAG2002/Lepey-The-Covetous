@@ -6,15 +6,25 @@ namespace LepeyTheCovetous;
 
 public class GameScene :IScene
 {
+    #region Public variables
+    public EntityManager Entities;
+    #endregion
+
+    #region Private variables
     private ScoreManager _score;
     private bool _isPaused;
     private string _scoreText, _pauseText, _resumeText, _toMenuText;
+    #endregion
 
+    #region Event-releated
     public delegate void SceneTransition(SceneType type);
     public static event SceneTransition SceneChangedEvent;
+    #endregion
 
     public GameScene(ScoreManager score)
     {
+        Entities = new EntityManager();
+
         _score = score;
 
         _isPaused = false;
@@ -39,11 +49,13 @@ public class GameScene :IScene
         _score.Update();
 
         // Entities update
+        Entities.Update(gameTime);
     }
 
     public void Render(SpriteBatch spriteBatch)
     {
         // Drawing the entities
+        Entities.Render(spriteBatch);
 
         // Drawing the UI
         SpriteFont smallFont = AssetManager.Instance().GetFont("Small");
