@@ -43,6 +43,7 @@ public class Game1 : Game
         _spriteBatch = new SpriteBatch(GraphicsDevice);
         
         #region Managers init
+        AssetManager.Instance().LoadAssets(Content);
         _scenes = new SceneManager();
         #endregion
     }
@@ -66,6 +67,9 @@ public class Game1 : Game
         // Drawing stuff here
         _spriteBatch.Begin();
 
+        // Rendering the background
+        _spriteBatch.Draw(AssetManager.Instance().GetSprite("Background"), Vector2.Zero, Color.White);
+
         #region Managers render
         _scenes.Render(_spriteBatch);
         #endregion
@@ -73,5 +77,11 @@ public class Game1 : Game
         _spriteBatch.End();
 
         base.Draw(gameTime);
+    }
+
+    public static Vector2 CenterText(SpriteFont font, string text)
+    {
+        return new Vector2(ScreenWidth / 2 - font.MeasureString(text).X / 2,
+                           ScreenHeight / 2 - font.MeasureString(text).Y / 2);
     }
 }

@@ -16,6 +16,12 @@ public sealed class AssetManager
     public AssetManager()
     { }
 
+    // Returns the instatnce
+    public static AssetManager Instance()
+    {
+        return _instance;
+    }
+
     // Loading all of the assets
     public void LoadAssets(ContentManager content)
     {
@@ -27,25 +33,25 @@ public sealed class AssetManager
     // Only loading the sprites
     public void LoadSprites(ContentManager content)
     {
-        _spriteDict.Add("Background", content.Load<Texture2D>("bg_forest"));
-        _spriteDict.Add("Player-Walk-Left", content.Load<Texture2D>("player_walk_left"));
-        _spriteDict.Add("Player-Walk-Right", content.Load<Texture2D>("player_walk_right"));
-        _spriteDict.Add("Coin", content.Load<Texture2D>("spining_coint"));
+        _spriteDict.Add("Background", content.Load<Texture2D>("Sprites/bg_forest"));
+        _spriteDict.Add("Player-Walk-Left", content.Load<Texture2D>("Sprites/player_walk_left"));
+        _spriteDict.Add("Player-Walk-Right", content.Load<Texture2D>("Sprites/player_walk_right"));
+        _spriteDict.Add("Coin", content.Load<Texture2D>("Sprites/spining_coin"));
     }
 
     // Only loading the tiles
     public void LoadTiles(ContentManager content)
     {
-        _tileDict.Add("Tileset", content.Load<Texture2D>("forest_tileset"));
-        _tileDict.Add("Objects", content.Load<Texture2D>("forest_objects_tileset"));
+        _tileDict.Add("Tileset", content.Load<Texture2D>("Tiles/forest_tileset"));
+        _tileDict.Add("Objects", content.Load<Texture2D>("Tiles/forest_objects_tileset"));
     }
 
     // Only loading the fonts
     public void LoadFonts(ContentManager content)
     {
-        _fontDict.Add("Large", content.Load<SpriteFont>("large"));
-        _fontDict.Add("Medium", content.Load<SpriteFont>("medium"));
-        _fontDict.Add("Small", content.Load<SpriteFont>("small"));
+        _fontDict.Add("Large", content.Load<SpriteFont>("Font/large"));
+        _fontDict.Add("Medium", content.Load<SpriteFont>("Font/medium"));
+        _fontDict.Add("Small", content.Load<SpriteFont>("Font/small"));
     }
 
     // Loads a specific sprite

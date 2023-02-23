@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Font/large.spritefont</SourceFile>
-  <SourceTime>2023-02-23T10:55:29.5836519+02:00</SourceTime>
+  <SourceTime>2023-02-23T14:24:49.1867987+02:00</SourceTime>
   <DestFile>C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/bin/DesktopGL/Content/Font/large.xnb</DestFile>
-  <DestTime>2023-02-23T11:48:47.399487+02:00</DestTime>
+  <DestTime>2023-02-23T14:25:16.3803838+02:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2022-07-26T13:44:56+02:00</ImporterTime>
-  <Processor>LocalizedFontProcessor</Processor>
+  <Processor>FontDescriptionProcessor</Processor>
   <ProcessorTime>2022-07-26T13:44:56+02:00</ProcessorTime>
   <Parameters>
     <Key>PremultiplyAlpha</Key>

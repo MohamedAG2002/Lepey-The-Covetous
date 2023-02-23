@@ -11,8 +11,8 @@ public class OverScene : IScene
     public OverScene()
     {
         _title = "GAME OVER";
-        _scoreText = "SCORE: ";
-        _highScoreText = "HIGH SCORE: ";
+        _scoreText = "SCORE:";
+        _highScoreText = "HIGH SCORE:";
         _replayText = "[R] REPLAY";
         _toMenuText = "[M] MENU";
     }
@@ -24,6 +24,9 @@ public class OverScene : IScene
 
     public void Render(SpriteBatch spriteBatch)
     {
+        SpriteFont largeFont = AssetManager.Instance().GetFont("Large");
+        SpriteFont mediumFont = AssetManager.Instance().GetFont("Medium");
+
         // Title render
 
         // Score text render
