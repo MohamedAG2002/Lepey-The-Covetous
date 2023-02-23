@@ -16,6 +16,11 @@ public class SceneManager
         _currentScene = new MainMenuScene();
 
         _isSceneChange = false;
+
+        // Subscribing to events
+        MainMenuScene.SceneChangedEvent += OnSceneChanged;
+        GameScene.SceneChangedEvent += OnSceneChanged;
+        OverScene.SceneChangedEvent += OnSceneChanged;
     }
 
     public void Update(GameTime gameTime)
