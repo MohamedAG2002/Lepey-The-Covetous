@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Dev\\C# Projects\\MonoGameProjects\\LepeyTheCovetous\\LepeyTheCovetous.csproj": {}
+    "C:\\Dev\\C# Projects\\MonoGameProjects\\LepeyTheCovetous\\LepeyTheCovetous.csproj": {}
   },
   "projects": {
-    "c:\\Dev\\C# Projects\\MonoGameProjects\\LepeyTheCovetous\\LepeyTheCovetous.csproj": {
+    "C:\\Dev\\C# Projects\\MonoGameProjects\\LepeyTheCovetous\\LepeyTheCovetous.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Dev\\C# Projects\\MonoGameProjects\\LepeyTheCovetous\\LepeyTheCovetous.csproj",
+        "projectUniqueName": "C:\\Dev\\C# Projects\\MonoGameProjects\\LepeyTheCovetous\\LepeyTheCovetous.csproj",
         "projectName": "LepeyTheCovetous",
-        "projectPath": "c:\\Dev\\C# Projects\\MonoGameProjects\\LepeyTheCovetous\\LepeyTheCovetous.csproj",
+        "projectPath": "C:\\Dev\\C# Projects\\MonoGameProjects\\LepeyTheCovetous\\LepeyTheCovetous.csproj",
         "packagesPath": "C:\\Users\\family\\.nuget\\packages\\",
-        "outputPath": "c:\\Dev\\C# Projects\\MonoGameProjects\\LepeyTheCovetous\\obj\\",
+        "outputPath": "C:\\Dev\\C# Projects\\MonoGameProjects\\LepeyTheCovetous\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
