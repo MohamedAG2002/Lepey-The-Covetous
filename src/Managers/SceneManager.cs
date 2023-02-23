@@ -8,14 +8,15 @@ public class SceneManager
     public SceneType Type;
     private IScene _currentScene;
     private bool _isSceneChange;
+    private ScoreManager _score;
 
     public SceneManager()
     {
-        Type = SceneType.Over;
-
-        _currentScene = new OverScene();
-
+        Type = SceneType.Menu;
+        _currentScene = new MainMenuScene();
         _isSceneChange = false;
+
+        _score = new ScoreManager();
 
         // Subscribing to events
         MainMenuScene.SceneChangedEvent += OnSceneChanged;
@@ -38,10 +39,10 @@ public class SceneManager
                 LoadScene(new MainMenuScene());
                 break;
             case SceneType.Game:
-                LoadScene(new GameScene());
+                LoadScene(new GameScene(_score));
                 break;
             case SceneType.Over:
-                LoadScene(new OverScene());
+                LoadScene(new OverScene(_score));
                 break;
         }
 
@@ -62,6 +63,10 @@ public class SceneManager
 
     public void OnSceneChanged(SceneType sceneToChangeTo)
     {
+        // Resetting the score when going to the game since the ScoreManager does not reload with scenes
+        if(sceneToChangeTo == SceneType.Game)
+            _score.Score = 0;
+
         Type = sceneToChangeTo;
 
         _isSceneChange = true;

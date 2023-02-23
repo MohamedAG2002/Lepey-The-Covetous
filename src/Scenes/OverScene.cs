@@ -6,14 +6,17 @@ namespace LepeyTheCovetous;
 
 public class OverScene : IScene
 {
+    private ScoreManager _score;
     private string _title, _scoreText, _highScoreText;
     private string _replayText, _toMenuText;
 
     public delegate void SceneTransition(SceneType type);
     public static event SceneTransition SceneChangedEvent;
 
-    public OverScene()
+    public OverScene(ScoreManager score)
     {
+        _score = score;
+
         _title = "GAME OVER!";
         _scoreText = "SCORE: ";
         _highScoreText = "HIGH SCORE: ";
@@ -23,6 +26,10 @@ public class OverScene : IScene
 
     public void Update(GameTime gameTime)
     {
+        // Updating the score visuals
+        _scoreText = "SCORE: " + _score.Score;
+        _highScoreText = "HIGH SCORE: " + _score.HighScore;
+
         // TRANSITION: Over to Game
         if(KeyManager.GetState().IsKeyPressed(Keys.R))
             SceneChangedEvent?.Invoke(SceneType.Game);

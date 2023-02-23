@@ -6,17 +6,20 @@ namespace LepeyTheCovetous;
 
 public class GameScene :IScene
 {
+    private ScoreManager _score;
     private bool _isPaused;
     private string _scoreText, _pauseText, _resumeText, _toMenuText;
 
     public delegate void SceneTransition(SceneType type);
     public static event SceneTransition SceneChangedEvent;
 
-    public GameScene()
+    public GameScene(ScoreManager score)
     {
+        _score = score;
+
         _isPaused = false;
 
-        _scoreText = "SCORE:";
+        _scoreText = "SCORE: ";
         _pauseText = "PAUSED";
         _resumeText = "[R] RESUME";
         _toMenuText = "[M] MENU";
@@ -29,7 +32,11 @@ public class GameScene :IScene
             _isPaused = !_isPaused;
 
         // Only updating all of the below when not paused
-        if(!_isPaused) return;
+        if(_isPaused) return;
+
+        // Score update
+        _scoreText = "SCORE: " + _score.Score;
+        _score.Update();
 
         // Entities update
     }
