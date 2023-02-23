@@ -1,1 +1,1 @@
-# Lepey-The-Covetous
+# Lepey The Covetous
