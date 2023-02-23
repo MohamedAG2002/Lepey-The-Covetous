@@ -1,0 +1,3 @@
+Leprechaun: ZomBCool
+Coin: Puddin
+Tiles and background: Lucas Neves
