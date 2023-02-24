@@ -5,6 +5,7 @@ namespace LepeyTheCovetous;
 
 public abstract class IEntity
 {
+    public abstract TransformComponent Transform {get; set;}
     public abstract bool IsAlive {get; set;}
 
     public abstract void Render(SpriteBatch spriteBatch);

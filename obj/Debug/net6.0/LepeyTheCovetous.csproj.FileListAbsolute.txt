@@ -5,7 +5,6 @@ C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\bin\Debug\net6.0\Content\Sp
 C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\bin\Debug\net6.0\Content\Sprites\player_walk_left.xnb
 C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\bin\Debug\net6.0\Content\Sprites\player_walk_right.xnb
 C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\bin\Debug\net6.0\Content\Sprites\spining_coin.xnb
-C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\bin\Debug\net6.0\Content\Tiles\forest_objects_tileset.xnb
 C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\bin\Debug\net6.0\Content\Tiles\forest_tileset.xnb
 C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\bin\Debug\net6.0\LepeyTheCovetous.exe
 C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\bin\Debug\net6.0\LepeyTheCovetous.deps.json
@@ -32,3 +31,6 @@ C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\obj\Debug\net6.0\refint\Lep
 C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\obj\Debug\net6.0\LepeyTheCovetous.pdb
 C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\obj\Debug\net6.0\LepeyTheCovetous.genruntimeconfig.cache
 C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\obj\Debug\net6.0\ref\LepeyTheCovetous.dll
+C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\bin\Debug\net6.0\Content\Sprites\pot.xnb
+C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\bin\Debug\net6.0\TiledSharp.dll
+C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\bin\Debug\net6.0\Content\Tiles\forest_objects.xnb

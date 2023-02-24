@@ -10,11 +10,13 @@
     <File>C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Sprites/bg_forest.png</File>
     <File>C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Sprites/player_walk_left.png</File>
     <File>C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Sprites/player_walk_right.png</File>
+    <File>C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Sprites/pot.png</File>
     <File>C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Sprites/spining_coin.png</File>
-    <File>C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Tiles/forest_objects_tileset.png</File>
+    <File>C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Tiles/forest_objects.png</File>
     <File>C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Tiles/forest_tileset.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

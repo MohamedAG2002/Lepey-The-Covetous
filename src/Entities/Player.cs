@@ -6,7 +6,7 @@ namespace LepeyTheCovetous;
 public class Player : IEntity
 {
     public override bool IsAlive {get; set;}
-    public TransformComponent Transform;
+    public override TransformComponent Transform {get; set;}
     public SpriteComponent Sprite;
 
     public Player()

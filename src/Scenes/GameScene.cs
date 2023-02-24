@@ -54,6 +54,8 @@ public class GameScene :IScene
 
     public void Render(SpriteBatch spriteBatch)
     {
+        // Drawing the tiles
+
         // Drawing the entities
         Entities.Render(spriteBatch);
 

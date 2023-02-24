@@ -10,6 +10,7 @@
 
 #-------------------------------- References --------------------------------#
 
+/reference:TiledSharp.dll
 
 #---------------------------------- Content ---------------------------------#
 
@@ -70,6 +71,18 @@
 /processorParam:TextureFormat=Color
 /build:Sprites/player_walk_right.png
 
+#begin Sprites/pot.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/pot.png
+
 #begin Sprites/spining_coin.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -82,7 +95,7 @@
 /processorParam:TextureFormat=Color
 /build:Sprites/spining_coin.png
 
-#begin Tiles/forest_objects_tileset.png
+#begin Tiles/forest_objects.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -92,7 +105,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Tiles/forest_objects_tileset.png
+/build:Tiles/forest_objects.png
 
 #begin Tiles/forest_tileset.png
 /importer:TextureImporter
