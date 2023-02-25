@@ -2,6 +2,8 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
+using LDtk.Renderer;
+
 using System;
 
 namespace LepeyTheCovetous;
@@ -14,6 +16,7 @@ public class Game1 : Game
     public static readonly int ScreenWidth = 512;
     public static readonly int ScreenHeight = 480;
     public static Random Random;
+    public static LDtkRenderer Renderer;
 
     #region Managers
     private SceneManager _scenes;
@@ -41,6 +44,8 @@ public class Game1 : Game
     protected override void LoadContent()
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
+
+        Renderer = new LDtkRenderer(_spriteBatch);
         
         #region Managers init
         AssetManager.Instance().LoadAssets(Content);

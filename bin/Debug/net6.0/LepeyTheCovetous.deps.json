@@ -8,12 +8,23 @@
     ".NETCoreApp,Version=v6.0": {
       "LepeyTheCovetous/1.0.0": {
         "dependencies": {
+          "LDtkMonogame": "1.0.1",
           "MonoGame.Content.Builder.Task": "3.8.1.303",
-          "MonoGame.Framework.DesktopGL": "3.8.1.303",
-          "TiledSharp": "1.0.1"
+          "MonoGame.Framework.DesktopGL": "3.8.1.303"
         },
         "runtime": {
           "LepeyTheCovetous.dll": {}
+        }
+      },
+      "LDtkMonogame/1.0.1": {
+        "dependencies": {
+          "MonoGame.Framework.DesktopGL": "3.8.1.303"
+        },
+        "runtime": {
+          "lib/net6.0/LDtkMonogame.dll": {
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
+          }
         }
       },
       "MonoGame.Content.Builder.Task/3.8.1.303": {},
@@ -66,14 +77,6 @@
             "fileVersion": "0.0.0.0"
           }
         }
-      },
-      "TiledSharp/1.0.1": {
-        "runtime": {
-          "lib/netstandard2.0/TiledSharp.dll": {
-            "assemblyVersion": "0.15.0.0",
-            "fileVersion": "0.15.0.0"
-          }
-        }
       }
     }
   },
@@ -82,6 +85,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "LDtkMonogame/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5vVbNbH8pAX0s1q6F4gKEitmSmNBUDbrLyd5OAFqq/5mB0g+WAPf2vFZX45ppDe8/wJEp2J5dKM6OTa/7QLQYw==",
+      "path": "ldtkmonogame/1.0.1",
+      "hashPath": "ldtkmonogame.1.0.1.nupkg.sha512"
     },
     "MonoGame.Content.Builder.Task/3.8.1.303": {
       "type": "package",
@@ -96,13 +106,6 @@
       "sha512": "sha512-eGYhqn0n1olk8MNYeE9EuBmoNNECN1T18rPMaQpkzsEQ0H3nVyFPXC+uCo78v5pi5juQpJ3PSFnSkjzZJ1U58A==",
       "path": "monogame.framework.desktopgl/3.8.1.303",
       "hashPath": "monogame.framework.desktopgl.3.8.1.303.nupkg.sha512"
-    },
-    "TiledSharp/1.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-nY88Ux4Yj4aQ1QEP54KZwQ/QMrXSplGpqOxhab6SgkRminHv0PCrwZ9XBfFj0XSgy9omVFIeFrkig9ldXPKp3g==",
-      "path": "tiledsharp/1.0.1",
-      "hashPath": "tiledsharp.1.0.1.nupkg.sha512"
     }
   }
 }

@@ -10,7 +10,7 @@
 
 #-------------------------------- References --------------------------------#
 
-/reference:TiledSharp.dll
+/reference:C:/Users/family/.nuget/packages/ldtkmonogame.contentpipeline/1.0.1/lib/net6.0/LDtk.ContentPipeline.dll
 
 #---------------------------------- Content ---------------------------------#
 
@@ -34,6 +34,11 @@
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
 /build:Font/small.spritefont
+
+#begin Map/TheCovetousForest.ldtk
+/importer:LDtkFileImporter
+/processor:LDtkFileProcessor
+/build:Map/TheCovetousForest.ldtk
 
 #begin Sprites/bg_forest.png
 /importer:TextureImporter

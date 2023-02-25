@@ -11,6 +11,7 @@ public class GameScene :IScene
     #endregion
 
     #region Private variables
+    private TileManager _tiles;
     private ScoreManager _score;
     private bool _isPaused;
     private string _scoreText, _pauseText, _resumeText, _toMenuText;
@@ -24,6 +25,8 @@ public class GameScene :IScene
     public GameScene(ScoreManager score)
     {
         Entities = new EntityManager();
+
+        _tiles = new TileManager();
 
         _score = score;
 
@@ -54,7 +57,8 @@ public class GameScene :IScene
 
     public void Render(SpriteBatch spriteBatch)
     {
-        // Drawing the tiles
+        // Rendering the tiles
+        _tiles.Render();
 
         // Drawing the entities
         Entities.Render(spriteBatch);

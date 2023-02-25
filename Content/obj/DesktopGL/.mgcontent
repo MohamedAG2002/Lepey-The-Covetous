@@ -7,6 +7,7 @@
     <File>C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Font/large.spritefont</File>
     <File>C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Font/medium.spritefont</File>
     <File>C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Font/small.spritefont</File>
+    <File>C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Map/TheCovetousForest.ldtk</File>
     <File>C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Sprites/bg_forest.png</File>
     <File>C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Sprites/player_walk_left.png</File>
     <File>C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Sprites/player_walk_right.png</File>
@@ -16,6 +17,7 @@
     <File>C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Tiles/forest_tileset.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

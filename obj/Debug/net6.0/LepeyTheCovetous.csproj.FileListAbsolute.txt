@@ -32,5 +32,6 @@ C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\obj\Debug\net6.0\LepeyTheCo
 C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\obj\Debug\net6.0\LepeyTheCovetous.genruntimeconfig.cache
 C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\obj\Debug\net6.0\ref\LepeyTheCovetous.dll
 C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\bin\Debug\net6.0\Content\Sprites\pot.xnb
-C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\bin\Debug\net6.0\TiledSharp.dll
 C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\bin\Debug\net6.0\Content\Tiles\forest_objects.xnb
+C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\bin\Debug\net6.0\LDtkMonogame.dll
+C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\bin\Debug\net6.0\Content\Map\TheCovetousForest.xnb

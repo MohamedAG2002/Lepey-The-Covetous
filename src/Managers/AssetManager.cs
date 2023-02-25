@@ -2,7 +2,8 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 
-using TiledSharp;
+using LDtk;
+using LDtkTypes;
 
 using System.Collections.Generic;
 
@@ -14,7 +15,8 @@ public sealed class AssetManager
     private Dictionary<string, Texture2D> _spriteDict = new Dictionary<string, Texture2D>();
     private Dictionary<string, Texture2D> _tileDict = new Dictionary<string, Texture2D>();
     private Dictionary<string, SpriteFont> _fontDict = new Dictionary<string, SpriteFont>();
-    private TmxMap _map;
+    private LDtkFile _file;
+    private LDtkWorld _world;
 
     public AssetManager()
     { }
@@ -37,7 +39,8 @@ public sealed class AssetManager
     // Only loads the map
     public void LoadMap(ContentManager content)
     {
-        _map = new TmxMap("./Content/Map/TheCovetousForest.tmx");
+        _file = LDtkFile.FromFile("./Content/Map/TheCovetousForest.ldtk");
+        _world = _file.LoadWorld(Worlds.World.Iid);
     }
 
     // Only loading the sprites
@@ -84,8 +87,8 @@ public sealed class AssetManager
     }
 
     // Loads the map
-    public TmxMap GetMap()
+    public LDtkWorld GetMap()
     {
-        return _map;
+        return _world;
     }
 }
