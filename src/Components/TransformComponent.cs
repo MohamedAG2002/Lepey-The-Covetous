@@ -19,7 +19,8 @@ public class TransformComponent : IUpdateComponent
 
     public void Update(GameTime gameTime)
     {
-        
+        // Clamps the entity's position to stay inside the window borders
+        Position = new Vector2(MathHelper.Clamp(Position.X, 0.0f, Game1.ScreenWidth - 32.0f), Position.Y);
     }
 
     // Moves the position by a given offset
