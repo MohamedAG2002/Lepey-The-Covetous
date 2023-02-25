@@ -7,15 +7,15 @@ public class Player : IEntity
 {
     public override bool IsAlive {get; set;}
     public override TransformComponent Transform {get; set;}
-    public SpriteComponent Sprite;
+    public AnimatorComponent Animator {get; set;}
     public MoveComponent Move;
 
     public Player()
     {
         IsAlive = true;
 
-        Transform = new TransformComponent(new Vector2(100.0f, Game1.ScreenHeight - 155.0f), 0.0f, Vector2.One);
-        Sprite = new SpriteComponent(AssetManager.Instance().GetSprite("Player-Walk-Right"), Color.White, Transform);
+        Transform = new TransformComponent(new Vector2(100.0f, Game1.ScreenHeight - 155.0f));
+        Animator = new AnimatorComponent(AssetManager.Instance().GetSprite("Player-Walk-Left"), 3, 5);
         Move = new MoveComponent(200.0f);
     }
 
@@ -24,12 +24,22 @@ public class Player : IEntity
         Transform.Update(gameTime);
         Move.Update(gameTime);
 
+        // Only animating when the player is moving
+        if(Move.Velocity.X != 0)
+            Animator.Update(gameTime);
+
         Transform.MovePosition(Move.Velocity);
+
+        // Switching the animation depending on the direction of the player
+        if(Move.Direction == 1)
+            Animator.Animation = AssetManager.Instance().GetSprite("Player-Walk-Right");
+        else 
+            Animator.Animation = AssetManager.Instance().GetSprite("Player-Walk-Left");
     }
 
     public override void Render(SpriteBatch spriteBatch)
     {
         if(IsAlive)
-            Sprite.Render(spriteBatch);
+            Animator.Render(spriteBatch, Transform.Position);
     }
 }

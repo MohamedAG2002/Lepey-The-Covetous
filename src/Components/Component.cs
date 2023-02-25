@@ -10,5 +10,5 @@ public interface IUpdateComponent
 
 public interface IRenderComponent
 {
-    public void Render(SpriteBatch spriteBatch);
+    public void Render(SpriteBatch spriteBatch, Vector2 position);
 }
