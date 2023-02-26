@@ -50,7 +50,7 @@ public sealed class AssetManager
         _spriteDict.Add("Player-Walk-Left", content.Load<Texture2D>("Sprites/player_walk_left"));
         _spriteDict.Add("Player-Walk-Right", content.Load<Texture2D>("Sprites/player_walk_right"));
         _spriteDict.Add("Coin", content.Load<Texture2D>("Sprites/spining_coin"));
-        _spriteDict.Add("Poit", content.Load<Texture2D>("Sprites/pot"));
+        _spriteDict.Add("Pot", content.Load<Texture2D>("Sprites/pot"));
     }
 
     // Only loading the tiles

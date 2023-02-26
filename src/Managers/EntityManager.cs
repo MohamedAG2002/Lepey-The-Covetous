@@ -16,6 +16,8 @@ public class EntityManager
         /* Adding entities */
         // Player
         Entities.Add(new Player());
+        // Pot
+        Entities.Add(new Pot(Entities[0] as Player));
     }
 
     public void Update(GameTime gameTime)

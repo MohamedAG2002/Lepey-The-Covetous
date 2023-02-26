@@ -15,7 +15,7 @@ public class Player : IEntity
         IsAlive = true;
 
         Transform = new TransformComponent(new Vector2(100.0f, Game1.ScreenHeight - 155.0f));
-        Animator = new AnimatorComponent(AssetManager.Instance().GetSprite("Player-Walk-Left"), 3, 5);
+        Animator = new AnimatorComponent(AssetManager.Instance().GetSprite("Player-Walk-Left"), 3, 8);
         Move = new MoveComponent(200.0f);
     }
 
@@ -24,11 +24,11 @@ public class Player : IEntity
         Transform.Update(gameTime);
         Move.Update(gameTime);
 
+        Transform.MovePosition(Move.Velocity);
+
         // Only animating when the player is moving
         if(Move.Velocity.X != 0)
             Animator.Update(gameTime);
-
-        Transform.MovePosition(Move.Velocity);
 
         // Switching the animation depending on the direction of the player
         if(Move.Direction == 1)
