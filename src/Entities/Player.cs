@@ -32,9 +32,9 @@ public class Player : IEntity
 
         // Switching the animation depending on the direction of the player
         if(Move.Direction == 1)
-            Animator.Animation = AssetManager.Instance().GetSprite("Player-Walk-Right");
+            Animator.ChangeAnimation(AssetManager.Instance().GetSprite("Player-Walk-Right"));
         else 
-            Animator.Animation = AssetManager.Instance().GetSprite("Player-Walk-Left");
+            Animator.ChangeAnimation(AssetManager.Instance().GetSprite("Player-Walk-Left"));
     }
 
     public override void Render(SpriteBatch spriteBatch)

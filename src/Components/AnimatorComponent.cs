@@ -7,8 +7,8 @@ public class AnimatorComponent : IRenderComponent, IUpdateComponent
 {
     public Texture2D Animation {get; set;}
     public int Frames;
-    public int AnimationSpeed {get; set;}
     public Vector2 FrameSize {get; set;}
+    public int AnimationSpeed {get; set;}
 
     private int _currentFrame, _timer, _animationDirection;
     private bool _isAnimating;
@@ -18,7 +18,7 @@ public class AnimatorComponent : IRenderComponent, IUpdateComponent
         Animation = animation;
         Frames = frames;
         AnimationSpeed = animationSpeed;
-
+        
         FrameSize = new Vector2(Animation.Width / Frames, Animation.Height);
 
         _currentFrame = 0;
@@ -54,6 +54,14 @@ public class AnimatorComponent : IRenderComponent, IUpdateComponent
         Rectangle destRec = new Rectangle((_currentFrame * (int)FrameSize.X), 0, (int)FrameSize.X, (int)FrameSize.Y);
 
         spriteBatch.Draw(Animation, position, destRec, Color.White);
+    }
+
+    public void ChangeAnimation(Texture2D texture)
+    {
+        Animation = texture;
+
+        // Recalculating the size
+        FrameSize = new Vector2(Animation.Width / Frames, Animation.Height);
     }
 
     public void Play()
