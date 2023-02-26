@@ -10,6 +10,8 @@ public class ScoreManager
     {
         Score = 0;
         HighScore = 0;
+
+        Pot.ScoreIncreaseEvent += OnScoreChange;
     }
 
     public void Update()

@@ -97,6 +97,6 @@ public class GameScene :IScene
 
     public void OnCoinOutOfRange()
     {
-        //SceneChangedEvent?.Invoke(SceneType.Over);
+        SceneChangedEvent?.Invoke(SceneType.Over);
     }
 }

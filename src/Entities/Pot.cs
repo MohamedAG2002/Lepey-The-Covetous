@@ -9,7 +9,11 @@ public class Pot : IEntity
     public override bool IsAlive {get; set;}
     public override TransformComponent Transform {get; set;}
     public SpriteComponent Sprite {get; set;}
-    public ColliderComponent Collider {get; set;}
+    public Rectangle Collider 
+    {
+        get {return new Rectangle((int)Transform.Position.X, (int)Transform.Position.Y, Sprite.Texture.Width, Sprite.Texture.Height);}
+        set {Collider = value;}
+    }
 
     public delegate void ScoreIncrease();
     public static event ScoreIncrease ScoreIncreaseEvent;
@@ -26,13 +30,11 @@ public class Pot : IEntity
 
         Transform = new TransformComponent(_player.Transform.Position - _playerPosOffset);
         Sprite = new SpriteComponent(AssetManager.Instance().GetSprite("Pot"), Color.White);
-        Collider = new ColliderComponent(Sprite.Texture, Transform.Position);
     }
 
     public override void Update(GameTime gameTime)
     {
         Transform.Update(gameTime);
-        Collider.Update(gameTime);
 
         Transform.Position = _player.Transform.Position - _playerPosOffset;
     }
@@ -44,12 +46,13 @@ public class Pot : IEntity
             // Only checks for coins(not itself, nor the player)
             if(entity is Coin)
             {
-                if(Collider.IsCollding((entity as Coin).Collider.Collider))
+                if(Collider.Intersects((entity as Coin).Collider))
                 {
                     // Remove the coin
-
+                    entity.IsAlive = false;
 
                     // Increase the score
+                    ScoreIncreaseEvent?.Invoke();
                 }
             }
         }
