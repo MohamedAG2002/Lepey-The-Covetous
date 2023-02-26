@@ -1,5 +1,6 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 
 using LDtk;
@@ -15,6 +16,7 @@ public sealed class AssetManager
     private Dictionary<string, Texture2D> _spriteDict = new Dictionary<string, Texture2D>();
     private Dictionary<string, Texture2D> _tileDict = new Dictionary<string, Texture2D>();
     private Dictionary<string, SpriteFont> _fontDict = new Dictionary<string, SpriteFont>();
+    private Dictionary<string, SoundEffect> _soundDict = new Dictionary<string, SoundEffect>();
     private LDtkFile _file;
     private LDtkWorld _world;
 
@@ -34,6 +36,7 @@ public sealed class AssetManager
         LoadMap(content);
         LoadFonts(content);
         LoadSprites(content);
+        LoadAudio(content);
     }
 
     // Only loads the map
@@ -43,7 +46,7 @@ public sealed class AssetManager
         _world = _file.LoadWorld(Worlds.World.Iid);
     }
 
-    // Only loading the sprites
+    // Only loads the sprites
     public void LoadSprites(ContentManager content)
     {
         _spriteDict.Add("Background", content.Load<Texture2D>("Sprites/bg_forest"));
@@ -53,19 +56,26 @@ public sealed class AssetManager
         _spriteDict.Add("Pot", content.Load<Texture2D>("Sprites/pot"));
     }
 
-    // Only loading the tiles
+    // Only loads the tiles
     public void LoadTiles(ContentManager content)
     {
         _tileDict.Add("Tileset", content.Load<Texture2D>("Tiles/forest_tileset"));
         _tileDict.Add("Objects", content.Load<Texture2D>("Tiles/forest_objects"));
     }
 
-    // Only loading the fonts
+    // Only loads the fonts
     public void LoadFonts(ContentManager content)
     {
         _fontDict.Add("Large", content.Load<SpriteFont>("Font/large"));
         _fontDict.Add("Medium", content.Load<SpriteFont>("Font/medium"));
         _fontDict.Add("Small", content.Load<SpriteFont>("Font/small"));
+    }
+
+    // Only loads the audio
+    public void LoadAudio(ContentManager content)
+    {
+        _soundDict.Add("Coin-Clicker", content.Load<SoundEffect>("Audio/coin_clicker"));
+        _soundDict.Add("Coin-Splash", content.Load<SoundEffect>("Audio/coin_splash"));
     }
 
     // Loads a specific sprite
@@ -90,5 +100,11 @@ public sealed class AssetManager
     public LDtkWorld GetMap()
     {
         return _world;
+    }
+
+    // Loads a specfic audio
+    public SoundEffect GetAudio(string audioName)
+    {
+        return _soundDict[audioName];
     }
 }

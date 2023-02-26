@@ -16,7 +16,9 @@ public class Pot : IEntity
     }
 
     public delegate void ScoreIncrease();
+    public delegate void CoinAudio();
     public static event ScoreIncrease ScoreIncreaseEvent;
+    public static event CoinAudio CoinAudioEvent;
 
     private Player _player;
     private Vector2 _playerPosOffset;
@@ -50,6 +52,9 @@ public class Pot : IEntity
                 {
                     // Remove the coin
                     entity.IsAlive = false;
+
+                    // Play the appropriate sound
+                    CoinAudioEvent?.Invoke();
 
                     // Increase the score
                     ScoreIncreaseEvent?.Invoke();

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Audio/coin_clicker.wav</SourceFile>
+  <SourceTime>2023-02-26T16:51:14.8859559+02:00</SourceTime>
+  <DestFile>C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/bin/DesktopGL/Content/Audio/coin_clicker.xnb</DestFile>
+  <DestTime>2023-02-26T17:19:16.9989949+02:00</DestTime>
+  <Importer>WavImporter</Importer>
+  <ImporterTime>2022-07-26T13:44:56+02:00</ImporterTime>
+  <Processor>SoundEffectProcessor</Processor>
+  <ProcessorTime>2022-07-26T13:44:56+02:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

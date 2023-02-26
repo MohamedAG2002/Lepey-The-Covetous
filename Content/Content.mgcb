@@ -14,6 +14,18 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin Audio/coin_clicker.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/coin_clicker.wav
+
+#begin Audio/coin_splash.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/coin_splash.wav
+
 #begin Font/large.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor

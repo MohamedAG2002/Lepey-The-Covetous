@@ -20,7 +20,9 @@ public class Coin : IEntity
     }
 
     public delegate void CoinEvent();
+    public delegate void CoinAudio();
     public static event CoinEvent CointOutOfRange;
+    public static event CoinAudio CoinAudioEvent;
 
     public Coin(Vector2 position)
     {
@@ -40,7 +42,10 @@ public class Coin : IEntity
 
         // Triggering an event when a coin leaves the screen's borders
         if(Transform.Position.Y > Game1.ScreenHeight)
+        {
+            CoinAudioEvent?.Invoke();
             CointOutOfRange?.Invoke();
+        }
     }
 
     public override void CollisionUpdate(List<IEntity> entities)

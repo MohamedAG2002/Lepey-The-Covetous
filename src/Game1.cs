@@ -20,6 +20,7 @@ public class Game1 : Game
 
     #region Managers
     private SceneManager _scenes;
+    private AudioManager _audio;
     #endregion
 
     public Game1()
@@ -50,6 +51,7 @@ public class Game1 : Game
         #region Managers init
         AssetManager.Instance().LoadAssets(Content);
         _scenes = new SceneManager();
+        _audio = new AudioManager();
         #endregion
     }
 

@@ -1,4 +1,6 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Audio/coin_clicker.wav","C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/bin/DesktopGL/Audio/coin_clicker.xnb","SoundEffectProcessor","SoundEffectContent",152672,152613,5.1657586
+"C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Audio/coin_splash.wav","C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/bin/DesktopGL/Audio/coin_splash.xnb","SoundEffectProcessor","SoundEffectContent",33742,33769,3.0315382
 "C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Font/large.spritefont","C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/bin/DesktopGL/Font/large.xnb","FontDescriptionProcessor","SpriteFontContent",2069,136223,0.5927013
 "C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Font/medium.spritefont","C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/bin/DesktopGL/Font/medium.xnb","FontDescriptionProcessor","SpriteFontContent",2069,37919,0.040078
 "C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Font/small.spritefont","C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/bin/DesktopGL/Font/small.xnb","FontDescriptionProcessor","SpriteFontContent",2069,21535,0.0351343

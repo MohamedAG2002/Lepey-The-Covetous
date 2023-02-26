@@ -35,3 +35,5 @@ C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\bin\Debug\net6.0\Content\Sp
 C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\bin\Debug\net6.0\Content\Tiles\forest_objects.xnb
 C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\bin\Debug\net6.0\LDtkMonogame.dll
 C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\bin\Debug\net6.0\Content\Map\TheCovetousForest.xnb
+C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\bin\Debug\net6.0\Content\Audio\coin_clicker.xnb
+C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\bin\Debug\net6.0\Content\Audio\coin_splash.xnb
