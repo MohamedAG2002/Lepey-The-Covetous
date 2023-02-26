@@ -19,8 +19,10 @@ public class Coin : IEntity
 
     public override void Update(GameTime gameTime)
     {
+        Transform.Update(gameTime);
+
         // Constantly decending
-        Transform.MovePosition(new Vector2(0.0f, 200.0f));
+        Transform.MovePosition(new Vector2(0.0f, 200.0f * (float)gameTime.ElapsedGameTime.TotalSeconds));
     }
 
     public override void Render(SpriteBatch spriteBatch)
