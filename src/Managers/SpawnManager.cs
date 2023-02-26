@@ -15,10 +15,10 @@ public class SpawnManager
         _position = new Vector2(32.0f, 0.0f);
 
         _timer = 0.0f;
-        _maxTime = 20.0f;
+        _maxTime = 100.0f;
     }
 
-    public void Update(GameTime gameTime)
+    public void Update()
     {
         // Ticking the timer
         _timer++;

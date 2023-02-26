@@ -6,7 +6,7 @@ namespace LepeyTheCovetous;
 public class AnimatorComponent : IRenderComponent, IUpdateComponent
 {
     public Texture2D Animation {get; set;}
-    public int Frames;
+    public int Frames {get; set;}
     public Vector2 FrameSize {get; set;}
     public int AnimationSpeed {get; set;}
 
@@ -61,7 +61,7 @@ public class AnimatorComponent : IRenderComponent, IUpdateComponent
         Animation = texture;
 
         // Recalculating the size
-        FrameSize = new Vector2(Animation.Width / Frames, Animation.Height);
+        FrameSize = new Vector2(texture.Width / Frames, texture.Height);
     }
 
     public void Play()

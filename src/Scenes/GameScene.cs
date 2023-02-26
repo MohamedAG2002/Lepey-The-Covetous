@@ -6,13 +6,14 @@ namespace LepeyTheCovetous;
 
 public class GameScene :IScene
 {
-    #region Public variables
+    #region Managers
     public EntityManager Entities;
-    #endregion
-
-    #region Private variables
     private TileManager _tiles;
     private ScoreManager _score;
+    private SpawnManager _spawner;
+    #endregion
+
+    #region Fields
     private bool _isPaused;
     private string _scoreText, _pauseText, _resumeText, _toMenuText;
     #endregion
@@ -24,11 +25,12 @@ public class GameScene :IScene
 
     public GameScene(ScoreManager score)
     {
+        #region Managers init
         Entities = new EntityManager();
-
         _tiles = new TileManager();
-
         _score = score;
+        _spawner = new SpawnManager(Entities);
+        #endregion
 
         _isPaused = false;
 
@@ -36,6 +38,9 @@ public class GameScene :IScene
         _pauseText = "PAUSED";
         _resumeText = "[R] RESUME";
         _toMenuText = "[M] MENU";
+
+        // Subscribing to events
+        Coin.CointOutOfRange += OnCoinOutOfRange;
     }
 
     public void Update(GameTime gameTime)
@@ -50,6 +55,9 @@ public class GameScene :IScene
         // Score update
         _scoreText = "SCORE: " + _score.Score;
         _score.Update();
+
+        // Spawner update
+        _spawner.Update();
 
         // Entities update
         Entities.Update(gameTime);
@@ -85,5 +93,10 @@ public class GameScene :IScene
 
         // To menu text render
         spriteBatch.DrawString(mediumFont, _toMenuText, Game1.CenterText(mediumFont, _toMenuText) + new Vector2(0.0f, 40.0f), Color.LimeGreen);
+    }
+
+    public void OnCoinOutOfRange()
+    {
+        //SceneChangedEvent?.Invoke(SceneType.Over);
     }
 }

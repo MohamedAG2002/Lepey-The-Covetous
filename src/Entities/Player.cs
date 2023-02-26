@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -35,6 +36,11 @@ public class Player : IEntity
             Animator.ChangeAnimation(AssetManager.Instance().GetSprite("Player-Walk-Right"));
         else 
             Animator.ChangeAnimation(AssetManager.Instance().GetSprite("Player-Walk-Left"));
+    }
+
+    public override void CollisionUpdate(List<IEntity> entities)
+    {
+        // Does nothing here...
     }
 
     public override void Render(SpriteBatch spriteBatch)

@@ -35,6 +35,7 @@ public class EntityManager
         // Updating all of the entities
         foreach(var entity in Entities)
         {
+            entity.CollisionUpdate(Entities);
             entity.Update(gameTime);
         }
     }
