@@ -48,6 +48,10 @@ public class GameScene :IScene
         // Toggling the pause menu
         if(KeyManager.GetState().IsKeyPressed(Keys.P))
             _isPaused = !_isPaused;
+        
+        // TRANSITION: Game to Menu
+        if(Keyboard.GetState().IsKeyDown(Keys.M))
+            SceneChangedEvent?.Invoke(SceneType.Menu);
 
         // Only updating all of the below when not paused
         if(_isPaused) return;
