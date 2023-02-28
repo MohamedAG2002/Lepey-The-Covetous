@@ -16,7 +16,7 @@ public sealed class AssetManager
     private Dictionary<string, Texture2D> _spriteDict = new Dictionary<string, Texture2D>();
     private Dictionary<string, Texture2D> _tileDict = new Dictionary<string, Texture2D>();
     private Dictionary<string, SpriteFont> _fontDict = new Dictionary<string, SpriteFont>();
-    private Dictionary<string, SoundEffect> _soundDict = new Dictionary<string, SoundEffect>();
+    private Dictionary<string, SoundEffectInstance> _soundDict = new Dictionary<string, SoundEffectInstance>();
     private LDtkFile _file;
     private LDtkWorld _world;
 
@@ -74,9 +74,9 @@ public sealed class AssetManager
     // Only loads the audio
     public void LoadAudio(ContentManager content)
     {
-        _soundDict.Add("Coin-Clicker", content.Load<SoundEffect>("Audio/coin_clicker"));
-        _soundDict.Add("Coin-Splash", content.Load<SoundEffect>("Audio/coin_splash"));
-        _soundDict.Add("Background-Music", content.Load<SoundEffect>("Audio/background_music"));
+        _soundDict.Add("Coin-Clicker", content.Load<SoundEffect>("Audio/coin_clicker").CreateInstance());
+        _soundDict.Add("Coin-Splash", content.Load<SoundEffect>("Audio/coin_splash").CreateInstance());
+        _soundDict.Add("Background-Music", content.Load<SoundEffect>("Audio/background_music").CreateInstance());
     }
 
     // Loads a specific sprite
@@ -104,7 +104,7 @@ public sealed class AssetManager
     }
 
     // Loads a specfic audio
-    public SoundEffect GetAudio(string audioName)
+    public SoundEffectInstance GetAudio(string audioName)
     {
         return _soundDict[audioName];
     }

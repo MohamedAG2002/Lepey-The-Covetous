@@ -23,19 +23,19 @@ public class AudioManager
 
     public void OnCoinCollect()
     {
-        AssetManager.Instance().GetAudio("Coin-Clicker").Play(Volume, Pitch, Pan);
+        AssetManager.Instance().GetAudio("Coin-Clicker").Play();
     }
 
     public void OnGameOver()
     {
-        AssetManager.Instance().GetAudio("Coin-Splash").Play(Volume, Pitch, Pan);
+        AssetManager.Instance().GetAudio("Coin-Splash").Play();
     }
 
     public void OnGamePlayed(bool canPlayMusic)
     {
         if(canPlayMusic)
-            AssetManager.Instance().GetAudio("Background-Music").Play(Volume, Pitch, Pan);
+            AssetManager.Instance().GetAudio("Background-Music").Play();
         else 
-            AssetManager.Instance().GetAudio("Background-Music").CreateInstance().Stop();
+            AssetManager.Instance().GetAudio("Background-Music").Stop();
     }
 }
