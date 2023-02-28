@@ -5,4 +5,5 @@ Lepey--a short, stubborn leprechaun--has a lust for coins. Since he was a child 
 If you want to dabble with or look at the masterpiece that is the *code*, you can clone the project and use your favorite IDE(which is hopefully VSCode) to load the project. If you want to build it, though, you need **Monogame** and **LDtkMonogame** to do that.
 
 Otherwise, if you want to just play the game, you can head to the itch.io page for that.
+
 itch.io: https://mohamedag.itch.io/lepey-the-covetous
