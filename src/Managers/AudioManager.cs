@@ -18,6 +18,7 @@ public class AudioManager
         // Subscribing to events
         Pot.CoinAudioEvent += OnCoinCollect;
         Coin.CoinAudioEvent += OnGameOver;
+        SceneManager.GamePlayedEvent += OnGamePlayed;
     }
 
     public void OnCoinCollect()
@@ -28,5 +29,13 @@ public class AudioManager
     public void OnGameOver()
     {
         AssetManager.Instance().GetAudio("Coin-Splash").Play(Volume, Pitch, Pan);
+    }
+
+    public void OnGamePlayed(bool canPlayMusic)
+    {
+        if(canPlayMusic)
+            AssetManager.Instance().GetAudio("Background-Music").Play(Volume, Pitch, Pan);
+        else 
+            AssetManager.Instance().GetAudio("Background-Music").CreateInstance().Stop();
     }
 }

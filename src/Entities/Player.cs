@@ -17,7 +17,7 @@ public class Player : IEntity
 
         Transform = new TransformComponent(new Vector2(100.0f, Game1.ScreenHeight - 155.0f));
         Animator = new AnimatorComponent(AssetManager.Instance().GetSprite("Player-Walk-Left"), 3, 8);
-        Move = new MoveComponent(200.0f);
+        Move = new MoveComponent(250.0f);
     }
 
     public override void Update(GameTime gameTime)

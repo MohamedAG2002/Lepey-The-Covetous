@@ -10,6 +10,9 @@ public class SceneManager
     private bool _isSceneChange;
     private ScoreManager _score;
 
+    public delegate void GamePlayed(bool canPlayMusic);
+    public static event GamePlayed GamePlayedEvent;
+
     public SceneManager()
     {
         Type = SceneType.Menu;
@@ -69,7 +72,15 @@ public class SceneManager
     {
         // Resetting the score when going to the game since the ScoreManager does not reload with scenes
         if(sceneToChangeTo == SceneType.Game)
+        {
             _score.Score = 0;
+        
+            // Playing the background music only when it is the game scene
+            GamePlayedEvent?.Invoke(true);
+        }
+        // Don't play the music otherwise
+        else 
+            GamePlayedEvent?.Invoke(false);
 
         Type = sceneToChangeTo;
 

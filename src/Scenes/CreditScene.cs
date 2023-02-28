@@ -33,18 +33,18 @@ public class CreditScene : IScene
         spriteBatch.DrawString(largeFont, _title, new Vector2(Game1.CenterText(largeFont, _title).X, 10.0f), Color.Green);
 
         // ART:
-        spriteBatch.DrawString(mediumFont, "ART:", new Vector2(20.0f, 100.0f), Color.DarkGreen);
-        spriteBatch.DrawString(mediumFont, "ZomBCool", new Vector2(20.0f, 140.0f), Color.ForestGreen);
-        spriteBatch.DrawString(mediumFont, "Puddin", new Vector2(20.0f, 170.0f), Color.ForestGreen);
-        spriteBatch.DrawString(mediumFont, "Lucas Neves", new Vector2(20.0f, 200.0f), Color.ForestGreen);
+        spriteBatch.DrawString(mediumFont, "ART:", new Vector2(20.0f, 70.0f), Color.DarkGreen);
+        spriteBatch.DrawString(mediumFont, "ZomBCool", new Vector2(20.0f, 100.0f), Color.ForestGreen);
+        spriteBatch.DrawString(mediumFont, "Puddin", new Vector2(20.0f, 130.0f), Color.ForestGreen);
+        spriteBatch.DrawString(mediumFont, "Lucas Neves", new Vector2(20.0f, 160.0f), Color.ForestGreen);
 
         // AUDIO:
-        spriteBatch.DrawString(mediumFont, "AUDIO:", new Vector2(20.0f, 240.0f), Color.DarkGreen);
-        spriteBatch.DrawString(mediumFont, "Varkalandar", new Vector2(20.0f, 280.0f), Color.ForestGreen);
-        spriteBatch.DrawString(mediumFont, "LordTomorrow", new Vector2(20.0f, 310.0f), Color.ForestGreen);
-        spriteBatch.DrawString(mediumFont, "Matthew Pablo", new Vector2(20.0f, 340.0f), Color.ForestGreen);
+        spriteBatch.DrawString(mediumFont, "AUDIO:", new Vector2(20.0f, 200.0f), Color.DarkGreen);
+        spriteBatch.DrawString(mediumFont, "Varkalandar", new Vector2(20.0f, 230.0f), Color.ForestGreen);
+        spriteBatch.DrawString(mediumFont, "LordTomorrow", new Vector2(20.0f, 260.0f), Color.ForestGreen);
+        spriteBatch.DrawString(mediumFont, "Matthew Pablo", new Vector2(20.0f, 290.0f), Color.ForestGreen);
 
         // To menu text render
-        spriteBatch.DrawString(mediumFont, _toMenuText, new Vector2(Game1.CenterText(mediumFont, _toMenuText).X, 400.0f), Color.Green);
+        spriteBatch.DrawString(mediumFont, _toMenuText, new Vector2(Game1.CenterText(mediumFont, _toMenuText).X, 360.0f), Color.Green);
     }
 }

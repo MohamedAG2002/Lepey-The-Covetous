@@ -36,7 +36,7 @@ public class GameScene :IScene
 
         _scoreText = "SCORE: ";
         _pauseText = "PAUSED";
-        _resumeText = "[R] RESUME";
+        _resumeText = "[P] RESUME";
         _toMenuText = "[M] MENU";
 
         // Subscribing to events
