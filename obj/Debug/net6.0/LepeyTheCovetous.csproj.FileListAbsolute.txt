@@ -37,3 +37,4 @@ C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\bin\Debug\net6.0\LDtkMonoga
 C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\bin\Debug\net6.0\Content\Map\TheCovetousForest.xnb
 C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\bin\Debug\net6.0\Content\Audio\coin_clicker.xnb
 C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\bin\Debug\net6.0\Content\Audio\coin_splash.xnb
+C:\Dev\C# Projects\MonoGameProjects\LepeyTheCovetous\bin\Debug\net6.0\Content\Audio\background_music.xnb

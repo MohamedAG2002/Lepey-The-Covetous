@@ -14,6 +14,12 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin Audio/background_music.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/background_music.wav
+
 #begin Audio/coin_clicker.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor

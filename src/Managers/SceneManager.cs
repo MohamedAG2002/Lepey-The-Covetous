@@ -21,6 +21,7 @@ public class SceneManager
         // Subscribing to events
         MainMenuScene.SceneChangedEvent += OnSceneChanged;
         GameScene.SceneChangedEvent += OnSceneChanged;
+        CreditScene.SceneChangedEvent += OnSceneChanged;
         OverScene.SceneChangedEvent += OnSceneChanged;
     }
 
@@ -40,6 +41,9 @@ public class SceneManager
                 break;
             case SceneType.Game:
                 LoadScene(new GameScene(_score));
+                break;
+            case SceneType.Credit:
+                LoadScene(new CreditScene());
                 break;
             case SceneType.Over:
                 LoadScene(new OverScene(_score));

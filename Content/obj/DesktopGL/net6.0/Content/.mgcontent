@@ -4,6 +4,7 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Audio/background_music.wav</File>
     <File>C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Audio/coin_clicker.wav</File>
     <File>C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Audio/coin_splash.wav</File>
     <File>C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Font/large.spritefont</File>
@@ -19,6 +20,7 @@
     <File>C:/Dev/C# Projects/MonoGameProjects/LepeyTheCovetous/Content/Tiles/forest_tileset.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

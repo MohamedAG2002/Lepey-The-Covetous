@@ -15,7 +15,7 @@ public class SpawnManager
         _position = new Vector2(32.0f, 0.0f);
 
         _timer = 0.0f;
-        _maxTime = 100.0f;
+        _maxTime = 75.0f;
     }
 
     public void Update()
@@ -32,7 +32,7 @@ public class SpawnManager
             _entities.Entities.Add(new Coin(_position));
 
             // Picks a new random position
-            _position = new Vector2((float)Game1.Random.Next(0, Game1.ScreenWidth - 16), 0.0f);
+            _position = new Vector2((float)Game1.Random.Next(32, Game1.ScreenWidth - 32), 0.0f);
         }
     }
 }

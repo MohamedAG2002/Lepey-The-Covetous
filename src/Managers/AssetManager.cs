@@ -76,6 +76,7 @@ public sealed class AssetManager
     {
         _soundDict.Add("Coin-Clicker", content.Load<SoundEffect>("Audio/coin_clicker"));
         _soundDict.Add("Coin-Splash", content.Load<SoundEffect>("Audio/coin_splash"));
+        _soundDict.Add("Background-Music", content.Load<SoundEffect>("Audio/background_music"));
     }
 
     // Loads a specific sprite
